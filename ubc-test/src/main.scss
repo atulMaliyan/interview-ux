@@ -1,3 +1,5 @@
+@import './scss/var';
+
 // src/styles/main.scss
 $primary-color: black;
 $secondary-color: white;
@@ -13,4 +15,62 @@ body {
 .container {
   text-align: center;
   padding: 20px;
+}
+header{
+  background-color: $secondary-color;
+  color: $primary-color;
+   height: 50px;
+  @include flexCenter;
+  .logo{
+    height: auto;
+    text-transform: uppercase;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+   
+    .menu{
+      ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li{
+          display: inline;
+          margin: 0 10px;
+          padding: 20px;
+          a{
+            text-decoration: none;
+            color: $primary-color;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.heroSection{
+  background-color: gray;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .heading{
+    font-size: 2em;
+    color: $secondary-color;
+  }
+  .subheading{
+    font-size: 1.2em;
+    color: $primary-color;
+  }
+  button.primary-btn{
+background-color: $secondary-color;
+padding: 10px 20px;
+text-transform: uppercase;
+border: none;
+  }
 }
